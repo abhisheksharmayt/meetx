@@ -1,6 +1,29 @@
 # MeetX
 
-MeetX is a native macOS desktop and menu-bar app that detects Zoom and Google Meet calls, prompts you to record, records meeting audio, and writes a transcript, summary, notes, metadata, and raw audio to your Desktop.
+MeetX is a native macOS desktop app for recording meeting audio and generating meeting artifacts. It detects Zoom and Google Meet calls, shows a small notch-style prompt to start transcribing, records microphone audio, and saves the recording, transcript, summary, notes, and metadata on your Desktop.
+
+MeetX does not record your screen.
+
+## Features
+
+- Native macOS app with a main window and menu-bar controls.
+- Notch-style `Start transcribing?` prompt when a meeting is detected.
+- Google Meet detection for exact room links such as `https://meet.google.com/orr-crzx-vph`.
+- Zoom detection when the Zoom app is active.
+- Microphone-only `.m4a` recording.
+- OpenAI-powered transcription and summarization.
+- In-app meeting library for viewing summaries, notes, transcripts, settings, and folders.
+- Auto-stop when the tracked Meet tab closes, the browser closes, the meeting disappears, the Mac sleeps, or the app quits.
+
+## Requirements
+
+- macOS 14 or newer.
+- Xcode command line tools / Swift toolchain.
+- OpenAI API key.
+- macOS permissions:
+  - Microphone
+  - Notifications
+  - Automation for Chrome, Safari, or Edge when using Google Meet detection
 
 ## Build
 
@@ -14,51 +37,123 @@ The app bundle is created at:
 build/MeetX.app
 ```
 
-Launch it with Finder or:
+Launch it with:
 
 ```sh
 open build/MeetX.app
 ```
 
+After rebuilding, restart a running copy with:
+
+```sh
+killall MeetX
+open build/MeetX.app
+```
+
 ## First Run
 
-1. Open `MeetX`; the main window shows your meeting library and settings.
-2. Add your OpenAI API key.
-3. Keep the default models or edit them:
+1. Open MeetX.
+2. Go to the `Settings` tab in the app window.
+3. Paste your OpenAI API key and save.
+4. Keep the default models or update them:
    - Transcription: `gpt-4o-transcribe`
    - Summary: `gpt-5.5`
-4. Grant macOS permissions when prompted:
-   - Notifications
-   - Microphone
-   - Automation for supported browsers
+5. Allow requested macOS permissions.
+
+The API key is stored in macOS Keychain.
+
+## Using MeetX
+
+For Google Meet, open a real meeting room URL:
+
+```text
+https://meet.google.com/orr-crzx-vph
+```
+
+MeetX intentionally does not trigger on the generic Meet homepage:
+
+```text
+https://meet.google.com/
+```
+
+When a meeting is detected, MeetX shows a notch-style prompt at the top of the screen. Choose `Start` to begin recording. While recording, macOS shows the microphone indicator. Use `Stop Transcribing` in the app window or `Stop & Summarize` from the menu-bar item to stop manually.
 
 ## Output
 
-MeetX writes each processed meeting to:
+MeetX writes meeting folders to:
 
 ```text
-~/Desktop/MeetX Meetings/YYYY-MM-DD_HH-mm-ss_<meeting-name>/
+~/Desktop/MeetX Meetings/
 ```
 
-Each folder contains:
+Folder naming:
+
+- Meaningful meeting title:
+  - `Project-Sync_2026-06-06_13-05-12`
+- Generic or manual meeting:
+  - `2026-06-06_13-05-12_Google-Meet`
+  - `2026-06-06_13-05-12_Manual-Meeting`
+
+Each meeting folder can contain:
 
 - `recording.m4a`
 - `transcript.txt`
 - `summary.md`
 - `notes.md`
 - `metadata.json`
-- `error.txt` if processing fails after recording
+- `error.txt` if OpenAI processing fails
+
+MeetX also writes a debug log at:
+
+```text
+~/Desktop/MeetX Meetings/meetx.log
+```
 
 ## App Window
 
-The main MeetX window includes:
+The main app window includes:
 
-- A sidebar of saved meeting folders from `~/Desktop/MeetX Meetings`.
-- Built-in views for `Summary`, `Notes`, and `Transcript`.
+- A sidebar listing saved meeting folders.
+- Recording status and a `Stop Transcribing` button.
+- Tabs for `Summary`, `Notes`, `Transcript`, and `Settings`.
 - An `Open Folder` button for the selected meeting.
-- A `Settings` tab for the OpenAI API key and model names.
 
-## Notes
+## Troubleshooting
 
-- MeetX records microphone audio only. It does not record your screen.
-- Google Meet detection uses browser automation to read the active tab URL in Safari, Chrome, and Edge.
+If a meeting is not detected:
+
+- Confirm the URL is a real Meet room link like `https://meet.google.com/abc-defg-hij`.
+- Allow Automation permission for the browser when macOS asks.
+- Try restarting MeetX after changing permissions.
+
+If the mic icon stays on:
+
+- Click `Stop Transcribing` in the app window.
+- Or use the menu-bar item and choose `Stop & Summarize`.
+- If needed, run `killall MeetX`.
+
+If a recording does not appear:
+
+- Check `~/Desktop/MeetX Meetings/meetx.log`.
+- Confirm `~/Desktop/MeetX Meetings/` exists and is writable.
+- Check whether a folder was created with `error.txt`; audio may still be saved even if transcription failed.
+
+## Project Structure
+
+```text
+Package.swift
+Info.plist
+Scripts/build-app.sh
+Sources/MeetX/
+voice-svgrepo-com.svg
+```
+
+Important source areas:
+
+- `AppDelegate.swift`: app lifecycle, menu-bar controls, notifications.
+- `MeetingDetector.swift`: Zoom and Google Meet detection.
+- `NotchPromptController.swift`: notch-style start prompt.
+- `AudioRecorder.swift`: microphone-only recording.
+- `OpenAIClient.swift`: transcription and summarization calls.
+- `MainWindowController.swift`: desktop GUI and meeting library.
+- `MeetingProcessor.swift`: output folder and artifact writing.
