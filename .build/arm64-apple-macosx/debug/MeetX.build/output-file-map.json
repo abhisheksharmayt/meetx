@@ -1,0 +1,89 @@
+{
+  "": {
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/master.swiftdeps"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AppDelegate.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AudioRecorder.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/EventLogger.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MainWindowController.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingDetector.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingProcessor.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Models.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/NotchPromptController.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/OpenAIClient.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/RecordingController.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Settings.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.dia"
+  },
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/main.swift": {
+    "dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.d",
+    "object": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swift.o",
+    "swiftmodule": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swiftdeps",
+    "diagnostics": "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.dia"
+  }
+}

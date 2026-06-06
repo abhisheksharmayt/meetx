@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MeetX-arm64-apple-macosx26.0-debug.exe": ["<MeetX-arm64-apple-macosx26.0-debug.exe>"]
+  "MeetX-arm64-apple-macosx26.0-debug.module": ["<MeetX-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MeetX-arm64-apple-macosx26.0-debug.exe>","<MeetX-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<MeetX-arm64-apple-macosx26.0-debug.exe>","<MeetX-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX":
+    is-mutated: true
+commands:
+  "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX-entitlement.plist"]
+    description: "Write auxiliary file /Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX-entitlement.plist"
+
+  "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AppDelegate.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AudioRecorder.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/EventLogger.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MainWindowController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingDetector.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingProcessor.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Models.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/NotchPromptController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/OpenAIClient.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/RecordingController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Settings.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/main.swift"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/sources"]
+    description: "Write auxiliary file /Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/sources"
+
+  "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swift.o"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.product/Objects.LinkFileList"
+
+  "/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<MeetX-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<MeetX-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<MeetX-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<MeetX-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/Modules/MeetX.swiftmodule"]
+    outputs: ["<MeetX-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.MeetX-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.product/Objects.LinkFileList"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/MeetX"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug","-o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX","-module-name","MeetX","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_MeetX_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.product/Objects.LinkFileList","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/Modules/MeetX.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.MeetX-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX-entitlement.plist"]
+    outputs: ["<MeetX-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/MeetX"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX-entitlement.plist","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX"]
+
+  "C.MeetX-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AppDelegate.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/AudioRecorder.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/EventLogger.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MainWindowController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingDetector.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/MeetingProcessor.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Models.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/NotchPromptController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/OpenAIClient.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/RecordingController.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/Settings.swift","/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/main.swift","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/sources"]
+    outputs: ["/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AppDelegate.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/AudioRecorder.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/EventLogger.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MainWindowController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingDetector.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/MeetingProcessor.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Models.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/NotchPromptController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/OpenAIClient.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/RecordingController.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/Settings.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/main.swift.o","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/Modules/MeetX.swiftmodule"]
+    description: "Compiling Swift Module 'MeetX' (12 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","MeetX","-emit-dependencies","-emit-module","-emit-module-path","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/Modules/MeetX.swiftmodule","-output-file-map","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/output-file-map.json","-incremental","-c","@/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/MeetX.build/sources","-I","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/abhisheksharma/Documents/Codex/meetx/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MeetX_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","meetx"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/abhisheksharma/Documents/Codex/meetx/Sources/MeetX/","/Users/abhisheksharma/Documents/Codex/meetx/Package.swift","/Users/abhisheksharma/Documents/Codex/meetx/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
